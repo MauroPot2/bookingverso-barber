@@ -1,54 +1,31 @@
-lib/
-  app/
-    app.dart
-    router.dart
-    theme/
-      app_theme.dart
-      brand_theme.dart        // white label (colori/logo dal tenant)
-    bootstrap/
-      session_cubit.dart      // sessione + tenant + role
-      tenant_cubit.dart
+# BookingVerso Barber
 
-  core/
-    error/
-    utils/
-    widgets/                 // componenti riusabili (M3)
-    constants/
+Repository di studio per un'applicazione dedicata alla gestione di clienti e appuntamenti in un'attività di barbiere.
 
-  data/
-    supabase/
-      supabase_client.dart
-    repositories/
-      tenant_repo.dart
-      customer_repo.dart
-      staff_repo.dart
-      service_repo.dart
-      appointment_repo.dart
-    models/
-      tenant.dart
-      tenant_member.dart
-      customer.dart
-      staff.dart
-      service.dart
-      appointment.dart
+## Stato del progetto
 
-  features/
-    auth/
-      ui/
-      logic/
-    tenant_switch/
-      ui/
-      logic/
-    customer_shell/
-      ui/customer_shell.dart
-      ui/pages/
-        book_page.dart
-        my_appointments_page.dart
-        profile_page.dart
-    staff_shell/
-      ui/staff_shell.dart
-      ui/pages/
-        agenda_page.dart
-        appointments_page.dart
-        customers_page.dart
-        manage_page.dart
+Il codice attuale contiene un progetto Flutter di base e alcuni modelli Dart, tra cui `Customer` e `Transaction`. L'entry point in `bookingverso/lib/main.dart` esegue una semplice prova da console sui dati di un cliente.
+
+Il README precedente descriveva una possibile struttura con Supabase, repository e schermate per clienti e staff. Quella struttura è un'ipotesi progettuale, **non** un insieme di funzionalità già implementate.
+
+## Tecnologie
+
+- Dart e Flutter
+- Modelli per i dati applicativi
+- Test e linting Flutter predisposti dal progetto
+
+## Esecuzione
+
+~~~bash
+cd bookingverso
+flutter pub get
+dart run lib/main.dart
+~~~
+
+Per avviare una vera interfaccia Flutter occorrerà introdurre un widget radice e collegarlo all'entry point.
+
+## Sviluppi previsti
+
+Separazione fra modelli, logica applicativa e persistenza; autenticazione e gestione delle prenotazioni sono possibili evoluzioni, non ancora incluse nel codice corrente.
+
+Questo repository documenta un percorso di prototipazione e non è una soluzione pronta per un salone.
